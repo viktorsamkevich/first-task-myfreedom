@@ -1,4 +1,4 @@
 .idea
 node_modules
 *.log
-app/images/*.psd
+*.psd
