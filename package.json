@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/viktorsamkevich/first-task-myfreedom#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.3.0",
+    "imagemin-pngquant": "^5.0.1"
   }
 }
