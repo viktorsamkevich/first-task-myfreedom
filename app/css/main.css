@@ -1,0 +1,113 @@
+
+
+html, body {
+	font-size: 10px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 1978px;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 1147px;
+	height: auto;
+	min-height: 100%;
+}
+.clear {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+
+/*Set padding and background*/
+.header {
+	padding: 33px 0 37px 0;
+}
+wr-title {
+	padding: 226px 0 224px 0;
+}
+wr-advantages {
+	padding: 76px 0 80px 0;
+}
+wr-katalog {
+	padding: 78px 0 66px 0;
+}
+
+/*Create menu and button*/
+.header__menu {}
+.header__menu ul {}
+.header__menu ul li {}
+.header__menu ul li a {}
+.header__button {}
+
+/*Create title section*/
+.title__section {}
+.title__section h1 {}
+.title__section a {}
+
+/*Create advantages section*/
+.advantage__intro {}
+.advantage__intro h2 {}
+.advantage__intro p {}
+
+.advantage__item {}
+.advantage__item img {}
+.advantage__item h3 {}
+.advantage__item p {}
+
+/*Create katalog section*/
+.katalog__intro {}
+.katalog__intro img {}
+.katalog__intro h2 {}
+.katalog__intro p {}
+
+.katalog__buttons {}
+
+.katalog__item {}
+.katalog__item-elem1 {}
+.katalog__item-elem2 {}
+.katalog__item-elem3 {}
+.katalog__item-elem4 {}
+
+.katalog__button-presents {}
+
+/*Create footer*/
+.footer__contacts {}
+.footer__contacts address {}
+.footer__contacts address h4 {}
+.footer__contacts address p {}
+
+.footer__map {}
+
+/*Preloader
+#page-preloader {
+	position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #cce3e6;
+    opacity: 0.8;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('../img/spinner.gif') no-repeat 50% 50%;
+    margin: -50px 0 0 -50px;
+}*/

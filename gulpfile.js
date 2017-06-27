@@ -18,6 +18,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
+	gulp.watch('app/css/*.css', browserSync.reload);
 });
 
 gulp.task('clean', function() {
