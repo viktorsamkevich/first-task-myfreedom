@@ -1,7 +1,12 @@
-
+@font-face {
+	font-family: "MyriadProRegular";
+	src: url("../fonts/MyriadPro-Regular.otf");
+	font-style: normal;
+	font-weight: normal;
+}
 
 html, body {
-	font-size: 10px;
+	/*font-size: 10px;*/
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -29,6 +34,24 @@ a {
 ul {
 	list-style: none;
 }
+button {
+	width: 166px;
+	height: 40px;
+	color: #ff3251;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	border: 1px solid #ff3251;
+	border-radius: 20px;
+	background: none;
+	display: inline-block;
+	/*padding: 17px 43px;
+	margin: 20px 11px 20px 0px;
+	transition: all 0.5s ease;*/
+}
 
 /*Set padding and background*/
 .header {
@@ -48,29 +71,97 @@ wr-katalog {
 .header__menu {}
 .header__menu ul {}
 .header__menu ul li {}
-.header__menu ul li a {}
-.header__button {}
+.header__menu ul li a {
+	color: #797979;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 2.143;
+	letter-spacing: 0.6px;
+}
+.header__button {
+
+}
 
 /*Create title section*/
 .title__section {}
-.title__section h1 {}
+.title__section h1 {
+	color: #ffffff;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.6px;
+	text-shadow: 0px 3px 7.36px rgba(48, 50, 55, 0.42);
+	text-align: center;
+}
+
 .title__section a {}
 
 /*Create advantages section*/
 .advantage__intro {}
-.advantage__intro h2 {}
-.advantage__intro p {}
+.advantage__intro h2 {
+	color: #ff3251;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 0.8;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.advantage__intro p {
+	color: #626261;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.875;
+	letter-spacing: 1px;
+	text-align: center;
+}
 
 .advantage__item {}
 .advantage__item img {}
-.advantage__item h3 {}
-.advantage__item p {}
+.advantage__item h3 {
+	color: #ff3251;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.advantage__item p {
+	color: #626261;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.538;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
 
 /*Create katalog section*/
 .katalog__intro {}
 .katalog__intro img {}
-.katalog__intro h2 {}
-.katalog__intro p {}
+.katalog__intro h2 {
+	color: #ff3251;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 0.8;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.katalog__intro p {
+	color: #626261;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.875;
+	letter-spacing: 1px;
+	text-align: center;
+}
 
 .katalog__buttons {}
 
@@ -84,9 +175,36 @@ wr-katalog {
 
 /*Create footer*/
 .footer__contacts {}
-.footer__contacts address {}
-.footer__contacts address h4 {}
-.footer__contacts address p {}
+.footer__contacts address {
+	font-style: normal;
+}
+.footer__contacts address h4 {
+	color: #ff3251;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 0.8;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.footer__contacts address h5 {
+	color: #1f1f1f;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.429;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.footer__contacts address p {
+	color: #888788;
+	font-family: 'MyriadProRegular', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.429;
+	letter-spacing: 1px;
+	text-align: left;
+}
 
 .footer__map {}
 
