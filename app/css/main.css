@@ -6,7 +6,6 @@
 }
 
 html, body {
-	/*font-size: 10px;*/
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -265,7 +264,7 @@ button:hover {
 .advantage__item-reputation img {
 	height: 50px;
 	width: 51px;
-	padding-left: 128px;
+	padding-left: 123px;
 }
 .advantage__item-reputation h3 {
 	color: #ff3251;
@@ -441,17 +440,3 @@ button:hover {
     background: url('../img/spinner.gif') no-repeat 50% 50%;
     margin: -50px 0 0 -50px;
 }*/
-
-/*adaptation*/
-.app {min-width: 320px;}
-@media (max-width: 320px) {
-	.header {width: 100%; background: green;}
-	.app {
-		height: 100%;
-		width: 320px;
-	}
-	.wrapper {
-		height: auto;
-		min-height: 100%;
-	}
-}
