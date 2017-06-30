@@ -99,6 +99,9 @@ button:hover {
 	font-size: 14px;
 	font-weight: 400;
 }
+.header__menu ul li a:hover {
+	color: #ff3251;
+}
 .header__button {
 	float: right;
 	margin-top: 18px;
@@ -122,6 +125,9 @@ button:hover {
 
 .title__section a {
 	padding-left: 335px; 
+}
+.title__section a img:hover {
+	transform: scale(1.4);
 }
 
 /*Create advantages section*/

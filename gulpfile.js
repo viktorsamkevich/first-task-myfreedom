@@ -5,6 +5,12 @@ var gulp         = require('gulp'), // Подключаем Gulp
 	imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'); // Подключаем библиотеку кеширования
+	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
+	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
+	sourcemaps   = require('gulp-sourcemaps');
+	rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
+	 rigger      = require('gulp-rigger'), //работа с инклюдами в html и js
 
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -21,10 +27,6 @@ gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('app/css/*.css', browserSync.reload);
 });
 
-gulp.task('clean', function() {
-	return del.sync('dist'); // Удаляем папку dist перед сборкой
-});
-
 gulp.task('img', function() {
 	return gulp.src('app/img/**/*') // Берем все изображения из app
 		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
@@ -36,7 +38,28 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'img'], function() {
+gulp.task('css', () =>
+	gulp.src('app/css/**/*.css')
+		.pipe(sourcemaps.init())
+		.pipe(autoprefixer())
+		.pipe(concat('all.css'))
+		.pipe(cssnano())
+		.pipe(rename({suffix: '.min'}))
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('dist/css'))
+);
+
+gulp.task('html', function () {
+    gulp.src('app/**/*.html') //Выберем файлы по нужному пути
+        .pipe(rigger()) //Прогоним через rigger
+        .pipe(gulp.dest('dist/')) //выгрузим их в папку build
+});
+
+gulp.task('clean', function() {
+	return del.sync('dist'); // Удаляем папку dist перед сборкой
+});
+
+gulp.task('build', ['clean', 'img', 'css', 'html'], function() {
 
 	var buildCss = gulp.src('app/css/*.css')  // Переносим CSS в продакшен
 	.pipe(gulp.dest('dist/css'))
