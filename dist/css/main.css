@@ -23,7 +23,6 @@ html, body {
 .clear {
 	content: '';
 	display: table;
-	width: 100%;
 	clear: both;
 }
 img {
@@ -283,7 +282,7 @@ button:hover {
 	padding-top: 4px;
 	padding-left: 33px;
 }
-.advantage__item-reputation h3 span {
+.advantage__item-reputation h3 > .coloring {
 	color: #00c7c0;
 	font-family: 'MyriadProRegular', sans-serif;
 	font-size: 24px;
@@ -376,10 +375,9 @@ button:hover {
 /*Create footer*/
 .footer {
 	display: flex;
+	flex-direction: row;
 }
 .footer__contacts {
-	display: flex;
-	flex-direction: row;
 	width: 777px;
 }
 .footer__contacts address {
@@ -420,8 +418,6 @@ button:hover {
 }
 
 .footer__map {
-	display: flex;
-	flex-direction: row;
 	width: 1143px;
 }
 
